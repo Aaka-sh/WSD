@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCA TIME TABLE</title>
+    <style> 
+        body{
+            font-family: sans-serif;
+        }
+        table{
+            margin: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 15px 40px;
+            text-align: center;
+        }
+        .rotate{
+            display:block;
+            -webkit-transform: rotate(-90deg); 
+            -moz-transform: rotate(-90deg); 
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+        }
+        .yellow-color{
+            background-color:blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="8">II TRI SEMESTER MCA - B SECTION</th>
+        </tr>
+        <tr>
+            <td></td>
+            <th>9:00 - 10:00</th>
+            <th>10:00 - 11:00</th>
+            <th>11:00 - 12:00</th>
+            <th>12:00 - 1:00</th>
+            <th rowspan="6"><p class="rotate"><b>LUNCH<br />BREAK</b></p></th>
+            <th>02:00 - 03:00</th>
+            <th>03:00 - 04:00</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>SE(VT)</td>
+            <td>MP(RK)</td>
+            <td class="yellow-color" colspan="2">
+                G1: MP LAB(RK,RV)811<br />
+                G2: WSD LAB(KL,SA)813
+            </td>
+            <td>WSD(KL)</td>
+            <td>RM(SD)</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td class="yellow-color" colspan="3">
+                DBT LAB(RU,JC,SD,FIZAN)MCA LAB
+            </td>
+            <td>DBT(RU)</td>
+            <td>LIBRARY</td>
+            <td>WSD(KL)</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>MP(RK)</td>
+            <td>RM(SD)</td>
+            <td>WSD(KL)</td>
+            <td>SE(VT)</td>
+            <td>LIBRARY</td>
+            <td>DBT(RK)</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>SE(VT)</td>
+            <td>DBT(RK)</td>
+            <td class="yellow-color" colspan="2">
+                G2: MP LAB(RK,RV)811<br />
+                G1: WSD LAB(KL,PR)BCA LAB
+            </td>
+            <td>MP(RK)</td>
+            <td>LIBRARY</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>WSD(KL)</td>
+            <td>RM(SD)</td>
+            <td class="yellow-color" colspan="2">
+                G1: MP LAB(RK,RV)811<br />
+                G2: WSD LAB(KL,PREEMA)MCA LAB
+            </td>
+            <td>MP(RK)</td>
+            <td>DBT(RU)</td>
+        </tr>
+    
+        <tr>
+            <td>Saturday</td>
+            <td class="yellow-color" colspan="2">
+                G2: MP LAB(RK,NVP)811<br />
+                G1: WSD LAB(KL,PR)BCA LAB
+            </td>
+            <td>SE(VT)</td>
+            <td>MENTORING</td>
+        </tr>
+    </table>
+</body>
+</html>
