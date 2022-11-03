@@ -73,6 +73,42 @@
             padding: 20px;
         }
 
+        .register{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(16, 60, 16);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            
+        }
+
+        .form--container{
+            color: white;
+            padding: 30px;
+            background-color: rgb(36, 82, 36);
+            border-radius: 15px;
+            width: 50%;
+            
+        }
+
+        .input--legend{
+            margin: 10px 0px; 
+            font-size: 1.5rem;
+            margin: 20px 0px 10px 0px;
+        }
+
+        .input--text{
+            width: 90%;
+            height: 30px;
+            border-radius: 5px;
+            border: none; 
+            text-indent: 10px;
+        }
+
         .heading{
             text-align: left;
             font-weight:1200;
@@ -164,31 +200,33 @@
             cursor: pointer;
         }
 
-        .button {
-            background-color: #8e8330; /* Green */
+        .btn--class {
+            background-color:rgb(16, 60, 16); /* Green */
             border: none;
             border-radius: 5px;
             color: white;
-            margin: 20px 10px;
-            padding: 10px 25px;
+            margin: 40px 180px;
+            padding: 22px 100px;
+            font-size: 1.2rem;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
             cursor: pointer;
         }
 
-        table{
+        .table--class{
             margin: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-items: center;
             border-collapse: collapse;
+            border-color: azure;
         }
         th, td {
             border: 1px solid black;
             padding: 15px 40px;
+            border: 1px solid white;
             text-align: left;
         }
 
@@ -206,13 +244,50 @@
             font-size: 1.5rem;
             cursor: pointer;
         }
+
+        .footer{
+            width: 100%;
+            height: auto;
+            background-color:rgb(116, 109, 109);
+            padding: 20px;
+            color: white;
+            font-size: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sub--footer{
+            width: 80%;
+        }
+
+        .footer--list{
+            margin: 60px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .city--links{
+            display: flex;
+
+        }
+
+        .city--links li{
+            margin: auto;
+        }
+
+        .city--link{
+            text-decoration: none;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <svg class="header--image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32L83.9 463.5C91 492 116.6 512 146 512H430c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32H458.4L365.3 12.9C359.2 1.2 344.7-3.4 332.9 2.7s-16.3 20.6-10.2 32.4L404.3 192H171.7L253.3 35.1zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
         <h2 class="header--title">DelEazzy</h2>
-        <a href = #about-section><button class="about--button">ABOUT US</button></a>
+        <a href = #register-section><button class="about--button">REGISTER</button></a>
+        <a href = #about-section><button class="about--button">KNOW US</button></a>
         
     </div>
     <div class="intro">
@@ -296,6 +371,32 @@
         </div>
     </div>
 
+    <div class="register" id="register-section">
+        <div class="form--container">
+            <h3 style="font-size: 2rem; margin:30px;text-align: center;">REGISTER!</h3>
+            <form>
+                <p class="input--legend">Name:</p>
+                <input class="input--text" type="text" />
+                
+                <p class="input--legend">Gender:</p>
+                <p class="input--legend"><input style="margin: 10px;" type="radio" value="Male" />Male</p>
+                <p class="input--legend"><input style="margin: 10px;" type="radio" value="Female" />Female</p>
+                <p class="input--legend"><input style="margin: 10px;" type="radio" value="Others" />Prefer not to say</p>
+            
+                <p class="input--legend">Email:</p>
+                <input class="input--text" type="email" />
+
+                <p class="input--legend">Password:</p>
+                <input class="input--text" type="password" />
+
+                <p class="input--legend">Repeat Password:</p>
+                <input class="input--text" type="password" />
+            
+            </form>
+            <button class="btn--class">REGISTER</button>
+        </div>
+    </div>
+
 
     <div class="about--us" id="about-section">
         <h1 class="about--us--heading">ABOUT US</h1>
@@ -308,6 +409,9 @@
             </p>
             <table class="table--class">
                 <tr>
+                    <td style="text-align: center;" colspan="2">DETAILS</td>
+                </tr>
+                <tr>
                     <td>Instamart Timing</td>
                     <td>6 AM to 1 AM Daily</td>
                 </tr>
@@ -316,23 +420,51 @@
                     <td>080-6746 XXXX</td>
                 </tr>
                 <tr>
-                    <td>Email</td>
+                    <td rowspan="2">Email</td>
                     <td>support@deleazzy.in</td>
+                </tr>
+                <tr>
+                    <td>contact@deleazzy.in</td>
                 </tr>
                 <tr>
                     <td>Coupon Code</td>
                     <td>FREEHERSHEYS</td>
                 </tr>
             </table>
-            <p>Follow Us</p>
-            <br />
-            <ul>
-                <li>Instagram:</li>
-                <li>Facebook</li>
-                <li>Twitter</li>
-            </ul>
         </div>
     </div>
+
+    <div class="footer">
+        <div class="sub--footer">
+
+            <div class="footer--list">
+                <p style="text-align: center; font-size: 2rem">AVAILABLE IN</p>
+                <br />
+                <ol class="city--links">
+                    <li><a class="city--link" href="">Bangalore</a></li>
+                    <li><a class="city--link" href="">Pune</a></li>
+                    <li><a class="city--link" href="">Mumbai</a></li>
+                    <li><a class="city--link" href="">Delhi-NCR</a></li>
+                    <li><a class="city--link" href="">Hyderabad</a></li>
+                    <li><a class="city--link" href="">Chennai</a></li>
+                </ol>
+            </div>
+
+            <hr />
+
+            <div class="footer--list">
+                <p style="text-align: center; font-size:2rem">FOLLOW US</p>
+                <br />
+                <img src="image_map.png" usemap="#followmap"/>
+                <map name="followmap">
+                    <area shape="rect" coords="100,30,210,150" alt="instagram" href="https://www.instagram.com/">
+                    <area shape="rect" coords="320,30,520,150" alt="facebook" href="https://www.facebook.com/">
+                    <area shape="circle" coords="510,30,550,150" alt="twitter" href="https://twitter.com/login">
+                    <area shape="circle" coords="600, 30, 860, 150" alt="pinterest" href="https://in.pinterest.com/">
+                </map>
+            </div>
+        </div>
+    </div>    
     
 </body>
 </html>
