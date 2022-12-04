@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="main--container">
+        <div class="form--container">
+            <div class="">
+                <p class="register--now--text">Register Now!</p>
+            </div>
+            <form class="form--class">
+                <div class="form--element">
+                    <label class="label--class">Full Name</label>
+                    <input onkeydown="nameValidation()" id="full-name" class="input--text" type="text" placeholder="Ex. Akash Goyal"/>
+                    <p id="name-message" class="message--class"></p>
+                </div>
+
+                <div class="form--element">
+                    <label class="label--class">Date of Birth</label>
+                    <input class="input--text" type="date" />
+                    <p id="message" class="message--class"></p>
+                </div>
+
+
+                <div class="form--element">
+                    <label class="label--class">Email</label>
+                    <input onkeydown="emailValidation()" id="email" class="input--text" type="email" placeholder="akashgoyal@gmail.com"/>
+                    <p id="email-message" class="message--class"></p>
+                </div>
+
+                <div class="form--element">
+                    <label class="label--class">Phone Number</label>
+                    <input onkeydown="phoneValidation()" id="phone" class="input--text" type="number" placeholder="8686898990" />
+                    <p id="phone-message" class="message--class"></p>
+                </div>
+
+                <div class="form--element">
+                    <label class="label--class">Username</label>
+                    <input class="input--text" type="text" placeholder="akashgoyal"/>
+                    <p id="username-message" class="message--class"></p>
+                </div>
+
+                <div class="form--element">
+                    <label class="label--class">Password</label>
+                    <input onkeydown="passwordValidation()" id="password" class="input--text" type="password" placeholder="One lower, One upper, one numeric, one special" />
+                    <p id="password-message" class="message--class"></p>
+                </div>
+                
+                <div class="form--element">
+                    <button class="button--class">REGISTER</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
