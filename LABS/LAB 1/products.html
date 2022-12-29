@@ -4,71 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <link href="style.css" rel="stylesheet"/>
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Domine&family=Spectral&display=swap" rel="stylesheet">
+    
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    
-    <div class="products">
-        <h1 class="products--heading">GROCERIES? ONE-TAP AWAY!</h1>
-
-        <div class="cards">
-            <div class="card">
-                <img src="fruits.jpg" alt="Image Not Found" style="width:100%">
-                <div class="container">
-                  <h4 class="card--name"><b>Fresh Fruits and Vegetables</b></h4>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="dairy.png" alt="Image Not Found" style="width:100%">
-                <div class="container">
-                  <h4 class="card--name"><b>Dairy and Milk Products</b></h4>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="cooking.png" alt="Image Not Found" style="width:100%">
-                <div class="container">
-                  <h4 class="card--name"><b>Cooking Essentials</b></h4>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="drinks.png" alt="Image Not Found" style="width:100%">
-                <div class="container">
-                  <h4 class="card--name"><b>Beverages</b></h4>
-                </div>
-            </div>
-        </div>
-        <div class="cards">
-            <div class="card">
-                <img src="bakery.png" alt="Image Not Found" style="width:100%">
-                <div class="container">
-                  <h4 class="card--name"><b>Bakery</b></h4>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="sweets.png" alt="Image Not Found" style="width:100%">
-                <div class="container">
-                  <h4 class="card--name"><b>Sweet Tooth</b></h4>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="instant.png" alt="Image Not Found" style="width:100%">
-                <div class="container">
-                  <h4 class="card--name"><b>Instant Food</b></h4>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="babycare.png" alt="Image Not Found" style="width:100%">
-                <div class="container">
-                  <h4 class="card--name"><b>Baby Care</b></h4>
-                </div>
-            </div>
+    <div class="products-division" ng-controller="groceryctrl">
+        <div id="tablediv">
+          <h2 style="margin-top: 100px;margin-left: 47%;">Menu </h2>
+          <table>
+              <tr>
+                  <th >Name <i class="fa fa-sort" ng-click="orderByMe('name')"></i></th>
+                  <th>Price <i class="fa fa-sort" ng-click="orderByMe('price')"></i></th>
+                  <th>Calories</th>
+                  <th>Category</th>                        
+                  <th>Description <i class="fa fa-sort" ng-click="orderByMe('calories')"></i></th>        
+              </tr>                    
+              <tr ng-repeat="fd1 in fd|limitTo:rowlimit|filter:searchtxt|orderBy:myOrderBy|filter:changeColorFilter">
+                  <td ng-style="customStyle.style">{{fd1.name}}</td>
+                  <td>&#8377;{{fd1.price|number:0}}</td>
+                  <td>{{fd1.calories}}</td>
+                  <td class="{{fd1.class}}" style="font-weight: bold;">{{fd1.category|uppercase}}</td>
+                  <td>{{fd1.description|lowercase}}</td>                
+              </tr>                
+          </table>           
         </div>
     </div>
 </body>
